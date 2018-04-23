@@ -38,17 +38,19 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    String yearnumber
+                    String yearnumber = "Year 1";
                     Intent i = new Intent(FirstActivity.this, SecondActivity.class);
-                    i.putExtra("year1", year[0]);
+                    i.putExtra("year1", yearnumber);
                     startActivity(i);
                 } else if (position == 1) {
+                    String yearnumber = "Year 2";
                     Intent i = new Intent(FirstActivity.this, SecondActivity.class);
-                    i.putExtra("year2", );
+                    i.putExtra("year2", yearnumber );
                     startActivity(i);
                 } else {
+                    String yearnumber = "Year 3";
                     Intent i = new Intent(FirstActivity.this, SecondActivity.class);
-                    i.putExtra("year3", info);
+                    i.putExtra("year3", yearnumber);
                     startActivity(i);
                 }
             }
