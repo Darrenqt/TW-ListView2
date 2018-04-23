@@ -37,13 +37,20 @@ public class FirstActivity extends AppCompatActivity {
         lvYear.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Year selectedYear = year.get(position);
-
-
-                // Intent i = new Intent(FirstActivity.this, SecondActivity.class);
-
-                // startActivity(i);
-
+                if (position == 0) {
+                    String yearnumber
+                    Intent i = new Intent(FirstActivity.this, SecondActivity.class);
+                    i.putExtra("year1", year[0]);
+                    startActivity(i);
+                } else if (position == 1) {
+                    Intent i = new Intent(FirstActivity.this, SecondActivity.class);
+                    i.putExtra("year2", );
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(FirstActivity.this, SecondActivity.class);
+                    i.putExtra("year3", info);
+                    startActivity(i);
+                }
             }
         });
     }
